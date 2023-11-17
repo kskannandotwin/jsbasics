@@ -115,7 +115,7 @@ x += 10;
 x--;
 // console.log(x);
 
-/*
+
 
 // coding challenge 1
 var massMark = 60;
@@ -131,6 +131,8 @@ bmiJohn = massJohn / heightJohn * 2;
 
 var isHighMark = bmiMark > bmiJohn;
 // console.log('Is Mark\'s BMI higher than John\'s? ' + isHighMark);
+
+/*
 
 if (bmiMark > bmiJohn) {
     console.log('Mark\'s BMI is higher than John\'s BMI');
