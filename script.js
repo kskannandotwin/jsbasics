@@ -68,93 +68,97 @@ ageMark = 33;
 yearJohn = now - ageJohn;
 yeahMark = now - ageMark;
 
-console.log(yearJohn);
+// console.log(yearJohn);
 
-console.log(now + 2);
-console.log(now * 2);
-console.log(now / 10);
+// console.log(now + 2);
+// console.log(now * 2);
+// console.log(now / 10);
 
 
 // Logical operators
 var johnOlder = ageJohn < ageMark;
-console.log(johnOlder);
+// console.log(johnOlder);
 
 
 // typeof operator
-console.log(typeof johnOlder);
-console.log(typeof ageJohn);
-console.log(typeof 'Mark is older tha John');
+// console.log(typeof johnOlder);
+// console.log(typeof ageJohn);
+// console.log(typeof 'Mark is older tha John');
 var x;
-console.log(typeof x);
+// console.log(typeof x);
 
-
-
-
-/*****************************
-* Operator precedence
-*/
-/*
+// operator precedence
 var now = 2018;
 var yearJohn = 1989;
 var fullAge = 18;
 
-// Multiple operators
-var isFullAge = now - yearJohn >= fullAge; // true
-console.log(isFullAge);
+// multiple operators
+var isFullAge = now - yearJohn >= fullAge; //true
+// console.log(isFullAge);
 
-// Grouping
+// grouping
 var ageJohn = now - yearJohn;
 var ageMark = 35;
 var average = (ageJohn + ageMark) / 2;
-console.log(average);
+// console.log(average);
 
-// Multiple assignments
+// multiple assignments
 var x, y;
-x = y = (3 + 5) * 4 - 6; // 8 * 4 - 6 // 32 - 6 // 26
-console.log(x, y);
+x = y = (3 + 5) * 4 - 6;
+// console.log(x, y);
 
-
-// More operators
+// more operators
 x *= 2;
-console.log(x);
+// console.log(x);
 x += 10;
-console.log(x);
+// console.log(x);
 x--;
-console.log(x);
-*/
-
-
-
-/*****************************
-* CODING CHALLENGE 1
-*/
+// console.log(x);
 
 /*
-Mark and John are trying to compare their BMI (Body Mass Index), which is calculated using the formula: BMI = mass / height^2 = mass / (height * height). (mass in kg and height in meter).
 
-1. Store Mark's and John's mass and height in variables
-2. Calculate both their BMIs
-3. Create a boolean variable containing information about whether Mark has a higher BMI than John.
-4. Print a string to the console containing the variable from step 3. (Something like "Is Mark's BMI higher than John's? true"). 
+// coding challenge 1
+var massMark = 60;
+var heightMark = 1.68;
+var massJohn = 55;
+var heightJohn = 1.6;
 
-GOOD LUCK 😀
+// bmi = mass/height*2
+bmiMark = massMark / heightMark * 2;
+bmiJohn = massJohn / heightJohn * 2;
+// console.log(bmiMark);
+// console.log(bmiJohn);
+
+var isHighMark = bmiMark > bmiJohn;
+// console.log('Is Mark\'s BMI higher than John\'s? ' + isHighMark);
+
+if (bmiMark > bmiJohn) {
+    console.log('Mark\'s BMI is higher than John\'s BMI');
+} else {
+    console.log('John\'s BMI is higher than Mark\'s BMI');
+}
+
+
+
+
+// if / else statements
+var firstName = 'John';
+var civilStatus = 'single';
+
+if (civilStatus === 'married') {
+    console.log(firstName + ' is Married.');
+} else {
+    console.log(firstName + ' will hopefully marry soon!');
+}
+
+var isMarried = true;
+if (isMarried) {
+    console.log(firstName + ' is Married.');
+} else {
+    console.log(firstName + ' will hopefully marry soon!');
+}
+ 
 */
-/*
-var massMark = 78; // kg
-var heightMark = 1.69; // meters
-
-var massJohn = 92;
-var heightJohn = 1.95;
-
-var BMIMark = massMark / (heightMark * heightMark);
-var BMIJohn = massJohn / (heightJohn * heightJohn);
-console.log(BMIMark, BMIJohn);
-
-var markHigherBMI = BMIMark > BMIJohn;
-console.log('Is Mark\'s BMI higher than John\'s? ' + markHigherBMI);
-*/
-
-
 
 /*****************************
 * If / else statements
