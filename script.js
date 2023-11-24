@@ -230,14 +230,14 @@ var scoreMary = (97 + 134 + 103) / 3;
 // console.log(scoreJohn, scoreMike, scoreMary);
 
 if (scoreJohn > scoreMike && scoreJohn > scoreMary) {
-    // console.log("John's team wins with " + scoreJohn + " points");
-  } else if (scoreMike > scoreJohn && scoreMike > scoreMary) {
-    // console.log("Mike's team wins with " + scoreMike + " points");
-  }else if (scoreMary > scoreJohn && scoreMary > scoreMike) {
-    // console.log("Mary's team wins with " + scoreMary + " points");
-  } else {
-    // console.log("There is a draw");
-  }
+  // console.log("John's team wins with " + scoreJohn + " points");
+} else if (scoreMike > scoreJohn && scoreMike > scoreMary) {
+  // console.log("Mike's team wins with " + scoreMike + " points");
+} else if (scoreMary > scoreJohn && scoreMary > scoreMike) {
+  // console.log("Mary's team wins with " + scoreMary + " points");
+} else {
+  // console.log("There is a draw");
+}
 
 /*
 if (scoreJohn > scoreMike) {
@@ -257,23 +257,44 @@ function calculateAge(birthYear) {
 var ageJohn = calculateAge(1990);
 var ageMike = calculateAge(1948);
 var ageJane = calculateAge(1969);
-console.log(ageJohn, ageMike, ageJane);
+// console.log(ageJohn, ageMike, ageJane);
 
 function yearsUntilRetirement(year, firstName) {
   var age = calculateAge(year);
   var retirement = 65 - age;
   if (retirement > 0) {
-    console.log(firstName + ' retires in ' + retirement + ' years.');
+    // console.log(firstName + ' retires in ' + retirement + ' years.');
   } else {
-    console.log(firstName + ' already retired.');
-  }  
+    // console.log(firstName + ' already retired.');
+  }
 }
 
-yearsUntilRetirement(1990, 'John');
-yearsUntilRetirement(1948, 'Mike');
-yearsUntilRetirement(1969, 'Jane');
+yearsUntilRetirement(1990, "John");
+yearsUntilRetirement(1948, "Mike");
+yearsUntilRetirement(1969, "Jane");
 
+// function statements and expresions
 
+// function declaration
+// function whatDoYouDo(job, firstName){};
+
+// function expression
+var whatDoYouDo = function (job, firstName) {
+  switch (job) {
+    case "teacher":
+      return firstName + " teaches kids how to code.";
+    case "driver":
+      return firstName + " teaches kids how to code.";
+    case "designer":
+      return firstName + " teaches kids how to code.";
+    default:
+      return firstName + " does something else.";
+  }
+};
+
+console.log(whatDoYouDo('teacher', 'John'));
+console.log(whatDoYouDo('designer', 'Jane'));
+console.log(whatDoYouDo('retired', 'Mark'));
 /*****************************
  * Function Statements and Expressions
  */
