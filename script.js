@@ -1,31 +1,22 @@
-// Initialize new array
-var names = ["John", "Mark", "Jane"];
-var years = new Array(1990, 1969, 1948);
+function tipCalculator(bill) {
+  var percentage;
+  if (bill < 50) {
+    percentage = 0.2;
+  } else if (bill >= 50 && bill < 200) {
+    percentage = 0.15;
+  } else {
+    percentage = 0.1;
+  }
+  return percentage * bill;
+}
 
-console.log(names[2]);
-console.log(names.length);
+var bills = [124, 48, 268];
+var tips = [
+  tipCalculator(bills[0]),
+  tipCalculator(bills[1]),
+  tipCalculator(bills[2]),
+];
 
-// Mutate array data
-names[1] = "Ben";
-names[names.length] = "Mary";
-console.log(names);
+var finalValues = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 
-// Different data types
-var john = ["John", "Smith", 1990, "designer", false];
-
-john.push("blue");
-john.unshift("Mr.");
-console.log(john);
-
-john.pop();
-john.pop();
-john.shift();
-console.log(john);
-
-console.log(john.indexOf(23));
-
-var isDesigner =
-  john.indexOf("designer") === -1
-    ? "John is NOT a designer"
-    : "John IS a designer";
-console.log(isDesigner);
+console.log(tips, finalValues);
