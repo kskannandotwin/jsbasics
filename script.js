@@ -1,22 +1,25 @@
-function tipCalculator(bill) {
-  var percentage;
-  if (bill < 50) {
-    percentage = 0.2;
-  } else if (bill >= 50 && bill < 200) {
-    percentage = 0.15;
-  } else {
-    percentage = 0.1;
-  }
-  return percentage * bill;
-}
+// Object literal
+var john = {
+  firstName: "John",
+  lastName: "Smith",
+  birthYear: 1990,
+  family: ["Jane", "Mark", "Bob", "Emily"],
+  job: "teacher",
+  isMarried: false,
+};
 
-var bills = [124, 48, 268];
-var tips = [
-  tipCalculator(bills[0]),
-  tipCalculator(bills[1]),
-  tipCalculator(bills[2]),
-];
+console.log(john.firstName);
+console.log(john["lastName"]);
+var x = "birthYear";
+console.log(john[x]);
 
-var finalValues = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+john.job = "designer";
+john["isMarried"] = true;
+console.log(john);
 
-console.log(tips, finalValues);
+// new Object syntax
+var jane = new Object();
+jane.firstName = "Jane";
+jane.birthYear = 1969;
+jane["lastName"] = "Smith";
+console.log(jane);
